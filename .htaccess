@@ -1,0 +1,10 @@
+AddHandler application/x-httpd-php73 php
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+# cache 30 day
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff|ttf)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+RewriteEngine On
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^UK$ ?lang=uk [L]
