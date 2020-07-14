@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Switch page on link click
       for (const a of this.$menuItems) {
         a.addEventListener('click', e => {
+          console.log(a);
           this.menuPageManager(a, document.querySelectorAll('.menu-page-wrapper'))
         })
       }
@@ -137,14 +138,20 @@ document.addEventListener('DOMContentLoaded', function () {
       if (pageContent.classList.contains('page-content-show')) {
         pageContent.classList.add('page-content-hide')
         pageContent.classList.remove('page-content-show')
+        // pageContent.classList.remove('menu-item-fixed')
+        aItem.classList.remove('menu-item-fixed')
       } else {
         menuPageColllection.forEach(element => {
           element.children[1].classList.remove('page-content-show')
           element.children[1].classList.remove('page-content-hide')
           element.children[1].classList.add('page-content-hide')
+          element.children[0].classList.remove('menu-item-fixed')
         });
         pageContent.classList.remove('page-content-hide')
         pageContent.classList.add('page-content-show')
+        // pageContent.classList.add('menu-item-fixed')
+        aItem.classList.add('menu-item-fixed')
+
       }
     }
 
