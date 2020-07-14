@@ -97,11 +97,11 @@ class ServiceInit {
          10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|
          vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|
          zte\-/i',substr($useragent,0,4))){
-                return $appSettings::COOKIE_DEVICE_MOBILE_VALUE;
-//                 return $appSettings::COOKIE_DEVICE_DESKTOP_VALUE;
-            } else {
-                return $appSettings::COOKIE_DEVICE_DESKTOP_VALUE;
 //                 return $appSettings::COOKIE_DEVICE_MOBILE_VALUE;
+                return $appSettings::COOKIE_DEVICE_DESKTOP_VALUE;
+            } else {
+//                 return $appSettings::COOKIE_DEVICE_DESKTOP_VALUE;
+                return $appSettings::COOKIE_DEVICE_MOBILE_VALUE;
             };
     }
 }
