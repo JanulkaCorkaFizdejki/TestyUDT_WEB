@@ -142,20 +142,22 @@ document.addEventListener('DOMContentLoaded', function () {
         pageContent.classList.add('page-content-hide')
         pageContent.classList.remove('page-content-show')
         etiquett.style.display = 'none'
-        aItem.style.display = 'block'
+        // aItem.style.display = 'block'
+        aItem.style.visibility = 'visible'
       } else {
         menuPageColllection.forEach(element => {
           element.children[1].classList.remove('page-content-show')
           element.children[1].classList.remove('page-content-hide')
           element.children[1].classList.add('page-content-hide')
           etiquett.style.display = 'none'
-          aItem.style.display = 'block'
+          element.children[0].style.visibility = 'visible'
         });
         pageContent.classList.remove('page-content-hide')
         pageContent.classList.add('page-content-show')
         etiquett.innerHTML = etiquettText
         etiquett.style.display = 'block'
-        aItem.style.display = 'none'
+        // aItem.style.display = 'none'
+        aItem.style.visibility = 'hidden'
 
       }
     }
