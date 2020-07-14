@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', function () {
         pageContent.classList.add('page-content-hide')
         pageContent.classList.remove('page-content-show')
         etiquett.style.display = 'none'
-        // aItem.style.display = 'block'
         aItem.style.visibility = 'visible'
       } else {
         menuPageColllection.forEach(element => {
@@ -156,7 +155,6 @@ document.addEventListener('DOMContentLoaded', function () {
         pageContent.classList.add('page-content-show')
         etiquett.innerHTML = etiquettText
         etiquett.style.display = 'block'
-        // aItem.style.display = 'none'
         aItem.style.visibility = 'hidden'
 
       }
