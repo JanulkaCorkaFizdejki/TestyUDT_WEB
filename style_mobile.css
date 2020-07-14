@@ -533,11 +533,21 @@ a.menu-item:focus {
 /* Section page-content - navigation links */
 /* Mobile version addon */
 
-.menu-item-fixed {
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*z-index: 15;*/
+#link-etiquett {
+    background-color: #333333;
+    color: #d7ab29;
+    font-size: 1.7em;
+    font-weight: 700;
+    user-select: none;
+    padding-left: 22vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(15vw + 2px);
+    z-index: 9;
+    display: none;
+    line-height: 15vw;
 }
 
 .menu-item {
@@ -571,7 +581,7 @@ a.menu-item:focus {
 }
 
 .page-content {
-    padding-left: 16vw;
+    padding-left: 10vw;
     background-color: #2b2b2b;
     color: #d7ab29;
     padding-bottom: 6vw;

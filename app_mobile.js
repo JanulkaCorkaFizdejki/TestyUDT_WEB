@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       this.$menuItems = $el.querySelectorAll('.menu-item');
       this.$coverBg = $el.querySelector('.cover-bg');
       this.$footerBg = document.querySelector('.footer');
-
+      this.etiquett = document.querySelector('#link-etiquett')
       this.init();
     }
 
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
       // Switch page on link click
       for (const a of this.$menuItems) {
         a.addEventListener('click', e => {
-          console.log(a);
           this.menuPageManager(a, document.querySelectorAll('.menu-page-wrapper'))
         })
       }
@@ -72,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         this.$coverBg.style.opacity = "0";
         this.$footerBg.style.backgroundColor = "#333333";
+        this.etiquett.style.display = 'none'
       }
 
       // collapses all pages on sidebar collapse
@@ -81,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
           el.parentElement.children[1].classList.add('page-content-hide')
         }
       })
+
+
 
       // adds class to active page, or to first
       // this.$pageContent.children[lastPageIndex].classList.add('page-content-active');
@@ -132,25 +134,25 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     menuPageManager(aItem, menuPageColllection) {
-
+      const etiquett = document.querySelector('#link-etiquett')
+      const etiquettText = aItem.innerText
       const pageContent = aItem.parentNode.children[1]
 
       if (pageContent.classList.contains('page-content-show')) {
         pageContent.classList.add('page-content-hide')
         pageContent.classList.remove('page-content-show')
-        // pageContent.classList.remove('menu-item-fixed')
-        aItem.classList.remove('menu-item-fixed')
+        etiquett.style.display = 'none'
       } else {
         menuPageColllection.forEach(element => {
           element.children[1].classList.remove('page-content-show')
           element.children[1].classList.remove('page-content-hide')
           element.children[1].classList.add('page-content-hide')
-          element.children[0].classList.remove('menu-item-fixed')
+          etiquett.style.display = 'none'
         });
         pageContent.classList.remove('page-content-hide')
         pageContent.classList.add('page-content-show')
-        // pageContent.classList.add('menu-item-fixed')
-        aItem.classList.add('menu-item-fixed')
+        etiquett.innerHTML = etiquettText
+        etiquett.style.display = 'block'
 
       }
     }
