@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       this.$coverBg = $el.querySelector('.cover-bg');
       this.$footerBg = document.querySelector('.footer');
       this.etiquett = document.querySelector('#link-etiquett')
+      this.menuPageWrappers = document.querySelectorAll('.menu-page-wrapper')
       this.init();
     }
 
@@ -32,17 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
         this.hamburgerClickScrollUp();
       });
 
-      // Switch page on link click // Obsolete by mobile
-      // [...this.$navLinks.children[0].children].forEach((el, index) => {
-      //   el.addEventListener('click', link => {
-      //     this.pageForLink(index)
-      //   });
-      // });
-
       // Switch page on link click
       for (const a of this.$menuItems) {
         a.addEventListener('click', e => {
-          this.menuPageManager(a, document.querySelectorAll('.menu-page-wrapper'))
+          this.menuPageManager(a, this.menuPageWrappers)
         })
       }
     };
@@ -72,6 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
         this.$coverBg.style.opacity = "0";
         this.$footerBg.style.backgroundColor = "#333333";
         this.etiquett.style.display = 'none'
+        this.menuPageWrappers.forEach(el => {
+          el.children[0].style.visibility = 'visible'
+        })
       }
 
       // collapses all pages on sidebar collapse
@@ -81,45 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
           el.parentElement.children[1].classList.add('page-content-hide')
         }
       })
-
-
-
-      // adds class to active page, or to first
-      // this.$pageContent.children[lastPageIndex].classList.add('page-content-active');
-
-      // adds highlight to last link
-      // this.$navLinks.children[0].children[lastPageIndex].classList.add('nav-link-color')
-
-      // switches display and turns on animation of page content
-      // if (this.$navLinks.classList.contains('nav-slide-active')) {
-      //   this.$pageContent.children[lastPageIndex].firstElementChild.classList.remove('display-none');
-      //   this.$pageContent.children[lastPageIndex].style.animation = 'pageContentPop 0.3s ease-in';
-      //   this.$pageContent.children[lastPageIndex].style.visibility = 'visible'
-      // } else {
-      //   [...this.$pageContent.children].forEach(e => e.firstElementChild.classList.add('display-none'));
-      //   this.$pageContent.children[lastPageIndex].style.animation = '';
-      //   this.$pageContent.children[lastPageIndex].style.visibility = 'hidden'
-      // }
     };
 
     hamburgerClickScrollUp() {
       if (this.$hamburger.classList.contains('hamburger-active')) {
           window.scroll({top:0, left:0, behavior: "smooth"});
       }
-    };
-
-    pageForLink(linkIndex) {
-      // switches page content according to link
-      // [...this.$pageContent.children].forEach(e => e.classList.remove('page-content-active'));
-      // this.$pageContent.children[linkIndex].classList.add('page-content-active');
-
-      // switches display according to link
-      // [...this.$pageContent.children].forEach(e => e.firstElementChild.classList.add('display-none'));
-      // this.$pageContent.children[linkIndex].firstElementChild.classList.remove('display-none');
-
-      // switches highlighting according to link
-      // [...this.$navLinks.children[0].children].forEach(e => e.classList.remove('nav-link-color'))
-      // this.$navLinks.children[0].children[linkIndex].classList.add('nav-link-color')
     };
 
     // returns index of last viewed page
@@ -142,17 +106,20 @@ document.addEventListener('DOMContentLoaded', function () {
         pageContent.classList.add('page-content-hide')
         pageContent.classList.remove('page-content-show')
         etiquett.style.display = 'none'
+        aItem.style.visibility = 'visible'
       } else {
         menuPageColllection.forEach(element => {
           element.children[1].classList.remove('page-content-show')
           element.children[1].classList.remove('page-content-hide')
           element.children[1].classList.add('page-content-hide')
           etiquett.style.display = 'none'
+          element.children[0].style.visibility = 'visible'
         });
         pageContent.classList.remove('page-content-hide')
         pageContent.classList.add('page-content-show')
         etiquett.innerHTML = etiquettText
         etiquett.style.display = 'block'
+        aItem.style.visibility = 'hidden'
 
       }
     }
