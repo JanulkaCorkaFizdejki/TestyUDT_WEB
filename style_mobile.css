@@ -860,13 +860,16 @@ div.qr-download {
     color: #333333;
 }
 
-.language a:hover,
-.language a:focus {
+.language a:hover {
     text-decoration: underline;
     outline: none;
 }
 
 a.language-selected {
+    text-decoration: underline;
+}
+
+.lang-active {
     text-decoration: underline;
 }
 
