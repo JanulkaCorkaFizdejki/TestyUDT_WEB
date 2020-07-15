@@ -514,13 +514,13 @@ html {
 
 a.menu-item {
     color: #686868;
-    font-size: 1.7em;
+    font-size: 1.4em;
     font-weight: 700;
     text-decoration: none;
     outline: none;
     word-wrap: break-word;
     user-select: none;
-    margin-left: 22vw;
+    margin-left: 18vw;
     margin-bottom: .6em;
     padding-top: 1.7vw;
 }
@@ -536,10 +536,10 @@ a.menu-item:focus {
 #link-etiquett {
     background-color: #333333;
     color: #d7ab29;
-    font-size: 1.7em;
+    font-size: 1.4em;
     font-weight: 700;
     user-select: none;
-    padding-left: 22vw;
+    padding-left: 18vw;
     position: fixed;
     top: 0;
     left: 0;
