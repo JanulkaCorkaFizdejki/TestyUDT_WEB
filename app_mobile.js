@@ -261,20 +261,20 @@ document.addEventListener('DOMContentLoaded', function () {
     /*
     * Set underline on active language
     * */
-    languageFocus() {
-      // remove underline from all link
-      this.$langLinks.forEach(link => link.classList.remove('language-selected'))
-
-      // adds underline on active link
-      const $langFocus = this.$el.querySelector(`#language-${this.defaultLanguage}`)
-      $langFocus.classList.add('language-selected')
-    }
+    // languageFocus() {
+    //   // remove underline from all link
+    //   this.$langLinks.forEach(link => link.classList.remove('language-selected'))
+    //
+    //   // adds underline on active link
+    //   const $langFocus = this.$el.querySelector(`#language-${this.defaultLanguage}`)
+    //   $langFocus.classList.add('language-selected')
+    // }
   } // end Language class
 
-  const $lang = document.querySelector('.language')
-  if ($lang !== null) {
-    const langClass = new Language($lang);
-  }
+  // const $lang = document.querySelector('.language')
+  // if ($lang !== null) {
+  //   const langClass = new Language($lang);
+  // }
 
   class Download {
     constructor(downloadButtons) {
