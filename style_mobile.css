@@ -870,7 +870,7 @@ a.language-selected {
 }
 
 .lang-active {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 /************************************************************************************/
