@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <script>
+if (!Array.prototype.forEach)
+{
+  Array.prototype.forEach = function(fun /*, thisp*/)
+  {
+    var len = this.length;
+    if (typeof fun != "function")
+      throw new TypeError();
+
+    var thisp = arguments[1];
+    for (var i = 0; i < len; i++)
+    {
+      if (i in this)
+        fun.call(thisp, this[i], i, this);
+    }
+  };
+}
+        const BaseURL = {
+            apiTestList: "http://testyudt.com/UDT_APP/API/index.php?api_key=cdad5e6b5ab66cd4e10b6ace30fee27c&api_tests_list=show"
+        }
+
+        function show() {
+            console.log("show")
+        }
+
+        
+        function printTestList (data, parentNode) {
+                data.forEach(function(testItem) {
+                    var urlParam = testItem.url.split("api_test_name=");
+                    console.log(urlParam[urlParam.length -1])
+                    parentNode.innerHTML = '<li><a href="#" class = "" onClick="show()" > '+ testItem.name +'</a></li>'                    
+                })
+            }
+
+        function fetchHTTPData (print = "test-list", url = BaseURL.apiTestList, parentNode) {
+            fetch(url)
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                if (print == "test-list") {
+                    printTestList (data, parentNode)
+                }
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            const parentNode = document.getElementById("test-list")
+            fetchHTTPData("test-list", BaseURL.apiTestList, parentNode)
+        })
+        </script>
+    </head>
+    <body>
+        <div id = "test-list-wrapper">
+            <ul id = "test-list">
+
+            </ul>
+
+        </div>
+
+    </body>
+</html>
