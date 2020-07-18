@@ -146,7 +146,7 @@ class Controller {
     /**
      * Zmienne tablicowe part: 1 argument górna granica przedziału, 2 dolna granica przedziału, 3 liczba losowanych elementów
      */
-    private function generateTestIndexes ($part1 = [0, 7, 4], $part2 = [8, 12, 4], $prt3 = [13, 22, 4]) {
+    private function generateTestIndexes ($part1 = [0, 7, 4], $part2 = [8, 12, 4], $part3 = [13, 22, 4]) {
         $outputArray = [];
         foreach(range(1, func_num_args()) as $index) {
             $arg = func_get_arg($index - 1);

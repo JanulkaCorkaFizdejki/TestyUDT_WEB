@@ -1,6 +1,10 @@
 <?php 
 
-require_once('AppSettings.php');
+// require_once('AppSettings.php');
+
+spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';
+});
 
 class ServiceInit { 
 

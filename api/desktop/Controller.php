@@ -53,8 +53,13 @@ class Controller {
                 $headers .= "MIME-Version: 1.0".PHP_EOL;
                 $headers .= "Content-type: text/html; charset=utf-8".PHP_EOL; 
 
-                $content = "<h2>Potwierdzenie zakupu aplikacji Testy UDT Desktop</h2>";
-                $content .= "<p>Dziękujemy za zakup aplikacji testy UDT</p>";
+
+                $content = '<div style="padding: 20px; font-family: Arial; background-color: #d7ab29; color: #333333">';
+                $content .= '<div><img src="http://testyudt.com/images/logotype_udt_333333.svg" width = "100" alt="Testy UDT">
+                            <h2>TESTY UDT</h2></div>';
+                $content .= "<h2>Potwierdzenie zakupu aplikacji Testy UDT (Desktop) v 1.0</h2>";
+                $content .= "<p>Dziękujemy za zakup aplikacji testy UDT!</p>";
+                $content .= "</div>";
 
                 $send = mail($emailAddress, "Testy UDT (Desktop) - Potwierdzenie zakupu", $content, $headers);
 
