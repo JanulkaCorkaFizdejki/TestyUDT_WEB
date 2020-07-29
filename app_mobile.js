@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
           this.menuPageManager(a, this.menuPageWrappers)
         })
       }
+
+      // Event for window location to reload page on hash change
+      window.addEventListener('hashchange', e => {
+        window.location.reload()
+      })
+
     };
 
     /*
