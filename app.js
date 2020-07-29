@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Event for window location to reload page on hash change
       window.addEventListener('hashchange', e => {
+        if (!this.$navLinks.classList.contains('nav-slide-active'))
         window.location.reload()
       })
 
