@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
           this.pageForLink(index)
         });
       });
+
+      // Event for window location to reload page on hash change
+      window.addEventListener('hashchange', e => {
+        window.location.reload()
+      })
+
     };
 
     /*
