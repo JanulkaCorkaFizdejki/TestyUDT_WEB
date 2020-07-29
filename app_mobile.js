@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     init() {
       this.events();
+      this.initPageUp();
     }
 
     events() {
@@ -121,6 +122,19 @@ document.addEventListener('DOMContentLoaded', function () {
         etiquett.style.display = 'block'
         aItem.style.visibility = 'hidden'
 
+      }
+    }
+
+    // when given exact addres, brings page up
+    initPageUp () {
+      const links = [...this.$menuItems]
+      let address =  window.location.href.split('#')[1]
+      for (const [index, linkNode] of Object.entries(links)) {
+        let linkName = linkNode.href.split(`#`)[1]
+        if (address === linkName) {
+          this.pageContentUp(index);
+          linkNode.click()
+        }
       }
     }
 

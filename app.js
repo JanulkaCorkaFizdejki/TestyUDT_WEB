@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     init() {
-      this.events();
+      this.events()
+      this.initPageUp()
     }
 
     events() {
@@ -101,6 +102,18 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       return pageIndex
     };
+
+    // when given exact addres, brings page up
+    initPageUp () {
+      const links = [...this.$navLinks.querySelectorAll('a')]
+      let address =  window.location.href.split('#')[1]
+      for (const [index, linkNode] of Object.entries(links)) {
+        let linkName = linkNode.href.split('#')[1]
+        if (address === linkName) {
+          this.pageContentUp(index);
+        }
+      }
+    }
 
   } // end Slide class
 
