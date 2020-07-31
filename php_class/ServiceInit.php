@@ -23,7 +23,7 @@ class ServiceInit {
 
     public static function getPriceAppDesktop() {
         $var_global_settings = new GlobalSettings();
-        echo $var_global_settings -> getDesktopPriceValue() / 100;
+        return round($var_global_settings -> getDesktopPriceValue() / 100, 2);
     }
 
 
