@@ -90,7 +90,7 @@ class Controller {
                                     <div style="padding: 20px 0;">
                                         <p><b>Wymagania / Specyfikacja</b></p>
                                         <ul style="line-height: 24px;">
-                                            <li>Stały dostęp ddo Internetu</li>
+                                            <li>Stały dostęp do Internetu</li>
                                             <li>Zainstalowana Java</li>
                                             <li>Opłata jest opłatą jednorazową i dotyczy danego urządzenia</li>
                                         </ul>
