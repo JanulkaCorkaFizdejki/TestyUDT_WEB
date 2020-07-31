@@ -96,7 +96,7 @@
         private const API_GET_MAC_ADDRESS                   = "api_get_mac_address";
 
         private const API_GET_DESKTOP_APP_PRICE             = "desktop-app-price";
-        private const API_DESKTOP_APP_PRICE_VALUE           = 934; // The provided amount should be given in the smallest unit of payment currency (grosz in case of PLN)
+        private const API_DESKTOP_APP_PRICE_VALUE           = 899; // The provided amount should be given in the smallest unit of payment currency (grosz in case of PLN)
         private const API_DESKTOP_APP_PRICE_CURRENCY        = "PLN";
 
         private const API_GET_PAYNOW_EXTERNALID             = "api_get_paynow_externalid";
