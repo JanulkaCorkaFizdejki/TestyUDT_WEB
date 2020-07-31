@@ -21,6 +21,11 @@ class ServiceInit {
         }
     }
 
+    public static function getPriceAppDesktop() {
+        $var_global_settings = new GlobalSettings();
+        echo $var_global_settings -> getDesktopPriceValue() / 100;
+    }
+
 
     private static function getBrowserLanguage ()
     {
@@ -108,5 +113,6 @@ class ServiceInit {
 //                 return $appSettings::COOKIE_DEVICE_MOBILE_VALUE;
             };
     }
+
 }
 ?>
