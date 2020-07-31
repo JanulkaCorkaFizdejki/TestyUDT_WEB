@@ -587,6 +587,57 @@ html {
     width: 30em;
 }
 
+.download-modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.download-modal-active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.download-modal-content {
+    position: relative;
+    width: auto;
+    min-height: 150px;
+    padding: 75px 25px 25px 25px;
+    background-color: #d7ab29;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+img.download-modal-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    transition: all 0.2s ease;
+
+}
+
+img.download-modal-close:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+
+
 .page3 a {
     text-decoration: none;
     font-weight: 700;
@@ -849,7 +900,6 @@ a.language-selected {
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 1.5s;
 }
 
 .ciastko-active {
@@ -992,6 +1042,13 @@ img.ciastko-logo {
     background-color: #d7ab29;
     color: #333333;
     margin-bottom: 1.5vw;
+}
+
+.download-modal-btn {
+    background-color: #333333;
+    color: #d7ab29;
+    font-size: 0.8em;
+    margin-bottom: 10px;
 }
 
 @keyframes download-anim1 {
