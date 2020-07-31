@@ -42,6 +42,26 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.reload()
       })
 
+      // Event for download button on download page
+      const page1Btn = document.querySelector('#download button')
+      const downloadModal = document.querySelector('.download-modal-bg')
+      const closeBtn = downloadModal.querySelector('.download-modal-close')
+      const downloadVersion1 = downloadModal.querySelector('#version1')
+      const downloadVersion2 = downloadModal.querySelector('#version2')
+      page1Btn.addEventListener('click', e => {
+        downloadModal.classList.add('download-modal-active')
+      })
+      closeBtn.addEventListener('click', e => {
+        downloadModal.classList.remove('download-modal-active')
+      })
+      downloadVersion1.addEventListener('click', e => {
+      //  HERE VERSION ONE
+        console.log(e);
+      })
+      downloadVersion2.addEventListener('click', e => {
+        //  HERE VERSION TWO
+        console.log(e);
+      })
     };
 
     /*
