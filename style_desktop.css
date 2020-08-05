@@ -975,7 +975,7 @@ img.ciastko-logo {
 a.ciastko-link:link,
 a.ciastko-link:visited {
     color: #333333;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a.ciastko-link:hover {
