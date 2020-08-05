@@ -968,6 +968,17 @@ img.ciastko-logo {
     animation: cookieAccept 0.6s ease-in-out infinite alternate-reverse;
 }
 
+
+a.ciastko-link:link,
+a.ciastko-link:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+a.ciastko-link:hover {
+    text-decoration: underline;
+}
+
 @keyframes cookieAccept {
     from {
         background-color: #242424;

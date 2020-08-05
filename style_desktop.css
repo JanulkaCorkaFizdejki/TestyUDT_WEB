@@ -911,7 +911,7 @@ a.language-selected {
 .ciastko-content {
     position: relative;
     width: 300px;
-    height: 430px;
+    height: auto;
     padding: 25px 25px;
     background-color: #d7ab29;
 }
@@ -970,6 +970,16 @@ img.ciastko-logo {
 
 .ciastko-accept:hover {
     animation: cookieAccept 0.6s ease-in-out infinite alternate-reverse;
+}
+
+a.ciastko-link:link,
+a.ciastko-link:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+a.ciastko-link:hover {
+    text-decoration: underline;
 }
 
 @keyframes cookieAccept {
