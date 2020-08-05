@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const closeBtn = downloadModal.querySelector('.download-modal-close')
       const downloadVersion1 = downloadModal.querySelector('#version1')
       const downloadVersion2 = downloadModal.querySelector('#version2')
+      const regulaminCheckbox = downloadModal.querySelector('#download-policy')
 
       page1Btn.addEventListener('click', e => {
         downloadModal.classList.add('download-modal-active')
@@ -63,12 +64,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
       downloadVersion1.addEventListener('click', e => {
       //  HERE VERSION ONE
-        console.log(e);
+        if (regulaminCheckbox.checked) {
+          console.log(e);
+        }
       })
 
       downloadVersion2.addEventListener('click', e => {
         //  HERE VERSION TWO
-        console.log(e);
+        if (regulaminCheckbox.checked) {
+          console.log(e);
+        }
       })
 
     };
