@@ -638,7 +638,7 @@ img.download-modal-close:hover {
 
 a.download-modal-link:link,
 a.download-modal-link:visited {
-    font-size: 0.7em;
+    font-size: 0.5em;
     color: #333333;
     text-decoration: none;
 }
@@ -655,7 +655,7 @@ a.download-modal-link:hover {
     margin-bottom: 20px;
     margin-top: 12px;
     cursor: pointer;
-    font-size: 0.7em;
+    font-size: 0.5em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -674,17 +674,17 @@ a.download-modal-link:hover {
 /* Create a custom checkbox */
 .checkbox {
     position: absolute;
-    top: 0;
+    top: -4px;
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: #404040;
     border-radius: 2px;
 }
 
 /* On mouse-over, add a grey background color */
 .checkbox-container:hover input ~ .checkbox {
-    background-color: #ccc;
+    background-color: #333333;
 }
 
 /* When the checkbox is checked, add a blue background */
