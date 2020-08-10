@@ -640,6 +640,7 @@ a.download-modal-link:link,
 a.download-modal-link:visited {
     font-size: 0.4em;
     color: #333333;
+    margin-bottom: 0.6em;
     text-decoration: none;
 }
 
@@ -652,7 +653,7 @@ a.download-modal-link:hover {
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 12px;
     cursor: pointer;
     font-size: 0.5em;
@@ -717,7 +718,6 @@ a.download-modal-link:hover {
     transform: rotate(45deg);
 }
 
-
 .documents-modal-bg {
     position: fixed;
     width: 100%;
@@ -752,9 +752,18 @@ a.download-modal-link:hover {
     border-radius: 10px;
 }
 
+.documents-modal-links {
+    list-style: decimal inside;
+    font-size: 0.8rem;
+}
+
+.documents-modal-links__item {
+    margin-bottom: 15px;
+}
+
 a.document-modal-link:link,
 a.document-modal-link:visited {
-    font-size: 0.6em;
+    font-size: 0.6rem;
     color: #333333;
     text-decoration: none;
 }
@@ -762,6 +771,14 @@ a.document-modal-link:visited {
 a.document-modal-link:hover {
     text-decoration: underline;
 }
+
+.page1 a {
+    font-weight: 700;
+    font-size: .5em;
+    letter-spacing: .05em;
+    color: #d7ab29;
+    outline: none;
+ }
 
 .page3 a {
     text-decoration: none;
@@ -1176,7 +1193,7 @@ a.ciastko-link:hover {
     font-size: 0.6em;
     background-color: #d7ab29;
     color: #333333;
-    margin-bottom: 1.5vw;
+    margin-bottom: .5em;
 }
 
 .download-modal-btn {
