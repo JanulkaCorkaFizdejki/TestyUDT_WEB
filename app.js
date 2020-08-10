@@ -43,13 +43,14 @@ document.addEventListener('DOMContentLoaded', function () {
       })
 
       // Event for download button on download page
-      const page1Btn = document.querySelector('#download button')
+      const page1Btn = document.querySelector('#download-app-btn')
       const mainBtn = document.querySelector('.main-page button.main-btn')
       const downloadModal = document.querySelector('.download-modal-bg')
-      const closeBtn = downloadModal.querySelector('.download-modal-close')
+      const closeBtn = downloadModal.querySelector('#download-modal-close__app')
       const downloadVersion1 = downloadModal.querySelector('#version1')
       const downloadVersion2 = downloadModal.querySelector('#version2')
-      const regulaminCheckbox = downloadModal.querySelector('#download-policy')
+      const policyCheckbox = downloadModal.querySelector('#download-policy')
+      const agreementCheckbox = downloadModal.querySelector('#download-agreement')
 
       page1Btn.addEventListener('click', e => {
         downloadModal.classList.add('download-modal-active')
@@ -64,16 +65,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
       downloadVersion1.addEventListener('click', e => {
       //  HERE VERSION ONE
-        if (regulaminCheckbox.checked) {
+        if (policyCheckbox.checked && agreementCheckbox.checked ) {
           console.log(e);
         }
       })
 
       downloadVersion2.addEventListener('click', e => {
         //  HERE VERSION TWO
-        if (regulaminCheckbox.checked) {
+        if (policyCheckbox.checked  && agreementCheckbox.checked) {
           console.log(e);
         }
+      })
+
+      // event for download docs btn
+      const page1BtnDocs = document.querySelector('#download-doc-btn')
+      const closeBtnDocs = document.querySelector('#download-modal-close__doc')
+      const documentsModal = document.querySelector('.documents-modal-bg')
+
+      page1BtnDocs.addEventListener('click', e => {
+        documentsModal.classList.add('documents-modal-active')
+      })
+      closeBtnDocs.addEventListener('click', e => {
+        documentsModal.classList.remove('documents-modal-active')
       })
 
     };
