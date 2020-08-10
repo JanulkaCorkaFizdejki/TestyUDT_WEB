@@ -61,7 +61,8 @@
         <p>
           Metoda płatności &#0150; <span class="bold700">Paynow</span>
         </p>
-        <button class="download-btn page1-btn">POBIERZ APLIKACJĘ</button>
+        <button class="download-btn page1-btn" id="download-app-btn">POBIERZ APLIKACJĘ</button><br>
+        <button class="download-btn page1-btn" id="download-doc-btn">POBIERZ DOKUMENTY</button>
         <hr>
         <p><span>Testy UDT na telefon:</span></p>
         <div class="qr-download">
@@ -186,15 +187,43 @@
 
 <div class="download-modal-bg">
   <div class="download-modal-content">
-    <img class="download-modal-close" src="images/iks.svg" alt="X">
+    <img class="download-modal-close" id="download-modal-close__app" src="images/iks.svg" alt="X">
     <button class="download-btn download-modal-btn" id="version1">Wersja instalacyjna</button>
     <button class="download-btn download-modal-btn" id="version2">Wersja spakowana</button>
-    <label class="checkbox-container">Akceptuję regulamin
+    <label class="checkbox-container">Akceptuję umowę licencyjną
+      <input type="checkbox" id="download-agreement" value="Accept">
+      <span class="checkbox"></span>
+    </label>
+    <label class="checkbox-container">Akceptuję polityka prywatności
       <input type="checkbox" id="download-policy" value="Accept">
       <span class="checkbox"></span>
     </label>
     <a href="http://testyudt.com/documents/testy_udt_privacy_policy.pdf" class="download-modal-link" target="_blank">
-      Czytaj regulamin
+      Czytaj umowę licencyjną
+    </a>
+    <a href="http://testyudt.com/documents/testy_udt_privacy_policy.pdf" class="download-modal-link" target="_blank">
+      Czytaj politykę prywatności
+    </a>
+  </div>
+</div>
+
+<div class="documents-modal-bg">
+  <div class="documents-modal-content">
+    <img class="download-modal-close" id="download-modal-close__doc" src="images/iks.svg" alt="X">
+    <a href="http://testyudt.com/documents/testy_udt_privacy_policy.pdf" class="document-modal-link" target="_blank">
+      Czytaj politykę prywatności
+    </a>
+    <a href="http://testyudt.com/documents/testy_udt_umowa_licencyjna.pdf" class="document-modal-link" target="_blank">
+      Czytaj umowę licencyjną
+    </a>
+    <a href="http://testyudt.com/documents/testy_udt_instukcja_uzytkowania.pdf" class="document-modal-link" target="_blank">
+      Czytaj instrukcję użytkowania
+    </a>
+    <a href="http://testyudt.com/documents/testy_udt_polityka_sprzedazy.pdf" class="document-modal-link" target="_blank">
+      Czytaj politykę sprzedaży
+    </a>
+    <a href="http://testyudt.com/documents/testy_udt_privacy_policy.pdf" class="document-modal-link" target="_blank">
+      Pobierz wszystkie dokumenty
     </a>
   </div>
 </div>

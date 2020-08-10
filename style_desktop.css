@@ -710,11 +710,57 @@ a.download-modal-link:hover {
     top: 5px;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: solid #d7ab29;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+
+.documents-modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.documents-modal-active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.documents-modal-content {
+    position: relative;
+    width: auto;
+    min-height: 150px;
+    padding: 75px 25px 25px 25px;
+    background-color: #d7ab29;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+a.document-modal-link:link,
+a.document-modal-link:visited {
+    font-size: 0.6em;
+    color: #333333;
+    text-decoration: none;
+}
+
+a.document-modal-link:hover {
+    text-decoration: underline;
 }
 
 .page3 a {
