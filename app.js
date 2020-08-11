@@ -66,14 +66,18 @@ document.addEventListener('DOMContentLoaded', function () {
       downloadVersion1.addEventListener('click', e => {
       //  HERE VERSION ONE
         if (policyCheckbox.checked && agreementCheckbox.checked ) {
-          console.log(e);
+          window.location.href = 'http://testyudt.com/downloads/setupTestyUDT.exe'
+        } else {
+          alert('Zaakceptuj umowę licencyjną oraz politykę prywatności')
         }
       })
 
       downloadVersion2.addEventListener('click', e => {
         //  HERE VERSION TWO
         if (policyCheckbox.checked  && agreementCheckbox.checked) {
-          console.log(e);
+          window.location.href = 'http://testyudt.com/downloads/TestyUDT.rar'
+        } else {
+          alert('Zaakceptuj umowę licencyjną oraz politykę prywatności')
         }
       })
 
