@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+<<<<<<< HEAD
 	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
 	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
 	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
@@ -13,28 +14,58 @@
 <svg version="1.1" id="Warstwa_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256px" height="256px"
 	 viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+=======
+        <!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+        <!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+        <!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+        <!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+        <!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+        <!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+        <!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+        <!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+        ]>
+<svg version="1.1" id="Warstwa_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256px" height="256px"
+     viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+>>>>>>> 0db540506c936dbdc2b9544034b1b83c5c2745d5
 <switch>
 	<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
 		<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
 		</i:pgfRef>
 	</foreignObject>
+<<<<<<< HEAD
 	<g i:extraneous="self">
+=======
+    <g i:extraneous="self">
+>>>>>>> 0db540506c936dbdc2b9544034b1b83c5c2745d5
 		<g>
 			<g id="c129_exclamation">
 				<path fill="#333333" d="M130.009,0.995c-70.145,0-127.01,56.855-127.01,126.982c0,70.164,56.865,127.029,127.01,127.029
 					c70.146,0,126.992-56.875,126.992-127.029C257.001,57.85,200.154,0.995,130.009,0.995z M130.009,241.998
 					c-62.978,0-114.002-51.053-114.002-114.03c0-62.952,51.024-113.984,114.002-113.984c62.96,0,113.993,51.033,113.993,113.984
 					C243.993,190.945,192.96,241.998,130.009,241.998z"/>
+<<<<<<< HEAD
 				<polygon fill="#333333" points="144.507,156.854 150.066,42.589 110.215,42.589 115.756,156.854 				"/>
 				<path fill="#333333" d="M130.145,169.463c-13.362,0-22.709,9.348-22.709,22.945c0,13.107,9.075,22.965,22.201,22.965h0.508
 					c13.617,0,22.429-9.857,22.429-22.965C152.337,178.811,143.498,169.463,130.145,169.463z"/>
 			</g>
 			<g id="Capa_1_207_">
+=======
+                <polygon fill="#333333" points="144.507,156.854 150.066,42.589 110.215,42.589 115.756,156.854 				"/>
+                <path fill="#333333" d="M130.145,169.463c-13.362,0-22.709,9.348-22.709,22.945c0,13.107,9.075,22.965,22.201,22.965h0.508
+					c13.617,0,22.429-9.857,22.429-22.965C152.337,178.811,143.498,169.463,130.145,169.463z"/>
+			</g>
+            <g id="Capa_1_207_">
+>>>>>>> 0db540506c936dbdc2b9544034b1b83c5c2745d5
 			</g>
 		</g>
 	</g>
 </switch>
+<<<<<<< HEAD
 <i:pgf  id="adobe_illustrator_pgf">
+=======
+    <i:pgf  id="adobe_illustrator_pgf">
+>>>>>>> 0db540506c936dbdc2b9544034b1b83c5c2745d5
 	<![CDATA[
 	eJzsvVuPHcl1LvhOgP9hz4MB6cAsZWRE5EVjDLCvHs3o0pBkW4Z90CiRpTYtNtlgs9Wn+/Fg5kcM
 5mfM67zN8f+a9a1bROTOXVVklY7bOlXRrK7Kyh0ZGWvFul/+6n/67Dcvtq/e/f7mRbzqNs+f/dVf

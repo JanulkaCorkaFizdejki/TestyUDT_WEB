@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const downloadVersion2 = downloadModal.querySelector('#version2')
       const policyCheckbox = downloadModal.querySelector('#download-policy')
       const agreementCheckbox = downloadModal.querySelector('#download-agreement')
+      const acceptTermsAlert = downloadModal.querySelector('.accept-terms-alert')
 
       page1Btn.addEventListener('click', e => {
         downloadModal.classList.add('download-modal-active')
@@ -67,8 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
       //  HERE VERSION ONE
         if (policyCheckbox.checked && agreementCheckbox.checked ) {
           window.location.href = 'http://testyudt.com/downloads/setupTestyUDT.exe'
+          // acceptTermsAlert.style.visibility = 'hidden';
+          acceptTermsAlert.style.display = 'none';
         } else {
-          alert('Zaakceptuj umowę licencyjną oraz politykę prywatności')
+          // acceptTermsAlert.style.visibility = 'visible';
+          acceptTermsAlert.style.display = 'block';
         }
       })
 
@@ -76,8 +80,11 @@ document.addEventListener('DOMContentLoaded', function () {
         //  HERE VERSION TWO
         if (policyCheckbox.checked  && agreementCheckbox.checked) {
           window.location.href = 'http://testyudt.com/downloads/TestyUDT.rar'
+          // acceptTermsAlert.style.visibility = 'hidden';
+          acceptTermsAlert.style.display = 'none';
         } else {
-          alert('Zaakceptuj umowę licencyjną oraz politykę prywatności')
+          // acceptTermsAlert.style.visibility = 'visible';
+          acceptTermsAlert.style.display = 'block';
         }
       })
 

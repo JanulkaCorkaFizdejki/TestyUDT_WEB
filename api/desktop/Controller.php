@@ -88,11 +88,23 @@ class Controller {
                                             Testy teoretyczne udostępnione w aplikacji opracowane są zgodnie z zasadami obowiązującymi na egzaminie teoretycznym Urzędu Dozoru Technicznego.</p>
                                     </div>
                                     <div style="padding: 20px 0;">
-                                        <p><b>Wymagania / Specyfikacja</b></p>
-                                        <ul style="line-height: 24px;">
-                                            <li>Stały dostęp do Internetu</li>
-                                            <li>Zainstalowana Java</li>
-                                            <li>Opłata jest opłatą jednorazową i dotyczy danego urządzenia</li>
+                                        <p><b>Dokumentacja</b></p>
+                                        <ul style="line-height: 24px; margin-left: -26px;">
+                                            <li><a href="http://testyudt.com/documents/testy_udt_privacy_policy.pdf" style="color: #333333" target="_blank">
+                                                Polityka prywatności
+                                              </a></li>
+                                            <li><a href="http://testyudt.com/documents/testy_udt_umowa_licencyjna.pdf" style="color: #333333" target="_blank">
+                                                Umowa licencyjna
+                                              </a></li>
+                                            <li><a href="http://testyudt.com/documents/testy_udt_instukcja_uzytkowania.pdf" style="color: #333333" target="_blank">
+                                                Instrukcja użytkowania
+                                              </a></li>
+                                            <li><a href="http://testyudt.com/documents/testy_udt_polityka_sprzedazy.pdf" style="color: #333333" target="_blank">
+                                                Polityka sprzedaży
+                                              </a></li>
+                                              <li><a href="http://testyudt.com/documents/testy_udt_dokumentacja.rar" style="color: #333333" target="_blank">
+                                                Pobierz wszystkie dokumenty
+                                              </a></li>
                                         </ul>
                                     </div>
                                     <div style="padding: 20px 0;">
