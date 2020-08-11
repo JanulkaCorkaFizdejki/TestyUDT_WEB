@@ -718,6 +718,34 @@ a.download-modal-link:hover {
     transform: rotate(45deg);
 }
 
+.accept-terms-alert {
+    display: none;
+    width: 300px;
+    font-size: .35rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    line-height: .5rem;
+    padding-left: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+}
+
+.accept-terms-alert::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    background-image: url("./images/exclamation-mark.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 6px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+
 .documents-modal-bg {
     position: fixed;
     width: 100%;
