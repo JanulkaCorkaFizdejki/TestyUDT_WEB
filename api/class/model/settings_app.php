@@ -87,7 +87,7 @@
     }
 
     class GlobalSettings {
-        private const API_MAIN_URL                          = "http://api.testyudt.com/";
+        private const API_MAIN_URL                          = "http://localhost/MyApp/TestyUDTnewPage/api/"; //http://api.testyudt.com/
         private const API_KEY_VALUE                         = "cdad5e6b5ab66cd4e10b6ace30fee27c";
         private const API_KEY_NAME                          = "api_key";
         private const API_TEST_NAME                         = "api_test_name";

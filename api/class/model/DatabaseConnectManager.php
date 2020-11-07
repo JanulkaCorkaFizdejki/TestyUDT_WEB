@@ -70,6 +70,17 @@ class DatabaseConnectManager {
         return $this -> getTestPool($query,  $answersLimit);
     }
 
+    public function getTableCountRow($tableName) {
+            $query = "SELECT COUNT(*) AS rows FROM $tableName";
+            try {
+                $db_data = $this -> db_connect -> query($query);
+                $row = $db_data -> fetch();
+                return $row['rows'];
+            } catch (PDOException $e) {
+                return false;
+            }
+    }
+
     public function getMacAddress ($macArray) {
         $query = "SELECT COUNT(address) AS isset FROM mac_address WHERE address IN (".implode(', ', $macArray).") LIMIT 1";
         try {
