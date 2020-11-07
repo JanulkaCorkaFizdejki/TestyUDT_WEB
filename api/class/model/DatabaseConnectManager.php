@@ -71,11 +71,11 @@ class DatabaseConnectManager {
     }
 
     public function getTableCountRow($tableName) {
-            $query = "SELECT COUNT(*) AS rows FROM $tableName";
+            $query = "SELECT COUNT(*) AS rowscount FROM $tableName";
             try {
                 $db_data = $this -> db_connect -> query($query);
                 $row = $db_data -> fetch();
-                return $row['rows'];
+                return $row['rowscount'];
             } catch (PDOException $e) {
                 return false;
             }

@@ -26,12 +26,11 @@ if (isset($_GET["version"])) {
                     foreach($testList as $key => $value) {
                         $answerRows = $dbManager -> getTableCountRow("a_$key");
                         $questionRows = $dbManager -> getTableCountRow("q_$key");
-
-                        if (!$answerRows or !$questionRows) {
+                        
+                        if ($answerRows == false or $questionRows == false) {
                             header("HTTP/1.1 404 Not Found");
-                            break;
+                            exit();
                         }
-
                         $object = (object) [
                             'name' => $key,
                             'questions' => (int) $questionRows,
