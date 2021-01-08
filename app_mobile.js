@@ -302,14 +302,16 @@ document.addEventListener('DOMContentLoaded', function () {
       this.$downloadButtons = downloadButtons
       this.platform = this.platformCheck()
       this.downloadUrl = {
-        iphone: "https://apps.apple.com/tt/app/testy-udt/id1502008238",
-        android: "https://play.google.com/store/apps/details?id=pl.testyudt"
-      }
-      this.init()
+          iphone: "https://apps.apple.com/tt/app/testy-udt/id1502008238",
+          android1: "https://play.google.com/store/apps/details?id=pl.testyudt",
+          android2: "https://play.google.com/store/apps/details?id=pl.testyudt"
+        }
+        this.init()
     }
-
+    
     init() {
-      this.events()
+        this.events()
+        console.log(this.$downloadButtons)
     }
 
     events() {
@@ -318,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (this.platform === "iphone") {
             location.href = this.downloadUrl.iphone
           } else {
-            location.href = this.downloadUrl.android
+            location.href = this.downloadUrl.android1
           }
         })
       })
