@@ -1041,7 +1041,7 @@ a.ciastko-link:hover {
 .main-btn {
     background-color: #333333;
     color: #d7ab29;
-    width: 50%;
+    width: fit-content;
     font-size: 3vw;
     margin-top: 2vw;
 }

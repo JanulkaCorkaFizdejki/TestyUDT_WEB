@@ -303,15 +303,17 @@ document.addEventListener('DOMContentLoaded', function () {
       this.platform = this.platformCheck()
       this.downloadUrl = {
           iphone: "https://apps.apple.com/tt/app/testy-udt/id1502008238",
-          android1: "https://play.google.com/store/apps/details?id=pl.testyudt",
-          android2: "https://play.google.com/store/apps/details?id=pl.testyudt"
-        }
-        this.init()
+          android_google: "https://play.google.com/store/search?q=testy%20udt",
+          android_huawei: "https://appgallery.huawei.com/#/search/testy%20udt?1610375249495"
+      }
+      this.init()
     }
     
     init() {
+        this.buttonsForPlatform()
         this.events()
         console.log(this.$downloadButtons)
+        console.log(this.$downloadButtons[0].dataset.platform)
     }
 
     events() {
@@ -320,7 +322,11 @@ document.addEventListener('DOMContentLoaded', function () {
           if (this.platform === "iphone") {
             location.href = this.downloadUrl.iphone
           } else {
-            location.href = this.downloadUrl.android1
+              if (e.dataset.platform === "google") {
+                  location.href = this.downloadUrl.android_google
+              } else if (e.dataset.platform === "huawei") {
+                  location.href = this.downloadUrl.android_huawei
+              }
           }
         })
       })
@@ -329,6 +335,23 @@ document.addEventListener('DOMContentLoaded', function () {
     platformCheck() {
       return window.navigator.platform.toLowerCase().trim()
     }
+
+    buttonsForPlatform() {
+        if (this.platform === "iphone") {
+            this.$downloadButtons.forEach(e => {
+                if (e.dataset.platform === "google" | e.dataset.platform === "huawei") {
+                    e.style.display = "none"
+                }
+            })
+        } else {
+            this.$downloadButtons.forEach( e => {
+                if (e.dataset.platform === "iphone") {
+                    e.style.display = "none"
+                }
+            })
+        }
+    }
+
   }
 
   const $downloadButton = document.querySelectorAll('.download-btn')
