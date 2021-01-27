@@ -725,6 +725,40 @@ div.qr-download {
     height: auto;
 }
 
+.qr-popup {
+    margin-top: 20px;
+    background-color: inherit;
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    padding: 5px; 
+    z-index: 100;
+    font-size: .5em;
+    display: none;
+    font-weight: 400;
+}
+
+div.qr-popup {
+    padding: 15px !important;
+}
+
+.qr-popup li {
+    list-style-type: disc;
+    margin-left: 25px;
+    padding: 4px 0 4px 0;
+    line-height: .7rem;
+}
+
+.qr-popup ul {
+    margin-bottom: 7px;
+}
+
+.qr-popup span {
+    font-size: .65rem;
+    padding-bottom: 7px;
+    display: block;
+}
+
 @keyframes pageContentPop {
     from {
         opacity: 0;

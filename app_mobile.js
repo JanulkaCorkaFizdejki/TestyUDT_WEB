@@ -306,14 +306,14 @@ document.addEventListener('DOMContentLoaded', function () {
           android_google: "https://play.google.com/store/search?q=testy%20udt",
           android_huawei: "https://appgallery.huawei.com/#/search/testy%20udt?1610375249495"
       }
+      this.infoDiv = document.querySelectorAll('.qr-popup')
       this.init()
     }
     
     init() {
         this.buttonsForPlatform()
         this.events()
-        console.log(this.$downloadButtons)
-        console.log(this.$downloadButtons[0].dataset.platform)
+        this.infoForPlatfrom()
     }
 
     events() {
@@ -349,6 +349,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     e.style.display = "none"
                 }
             })
+        }
+    }
+
+    infoForPlatfrom() {
+        if (this.platform === "iphone"){
+            this.infoDiv.forEach(el =>{
+                if (el.dataset.platform === "iphone") {
+                    el.style.display = "block"
+                }
+            })
+        } else {
+            this.infoDiv.forEach(el => {
+                if (el.dataset.platform === "google"){
+                    el.style.display = "block"
+                }
+            })
+
         }
     }
 
