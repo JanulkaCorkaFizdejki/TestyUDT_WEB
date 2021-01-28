@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
       this.$downloadButtons = downloadButtons
       this.platform = this.platformCheck()
       this.downloadUrl = {
-          iphone: "https://apps.apple.com/tt/app/testy-udt/id1502008238",
+          iphone: "https://www.apple.com/pl/search/Testy-UDT?src=serp",
           android_google: "https://play.google.com/store/search?q=testy%20udt",
           android_huawei: "https://appgallery.huawei.com/#/search/testy%20udt?1610375249495"
       }

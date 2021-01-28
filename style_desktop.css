@@ -923,7 +923,7 @@ div.qr-download {
 
 .qr-popup {
     position: absolute;
-    bottom: 57vh;
+    bottom: 51vh;
     margin-bottom: -220px;
     /* margin-left: 120px; */
     background-color: #222;
