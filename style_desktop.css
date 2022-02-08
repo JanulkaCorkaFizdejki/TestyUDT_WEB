@@ -412,6 +412,10 @@ html {
     font-size: calc(.9em + 1vw);
 }
 
+.font-size-small {
+    font-size: 0.7rem !important;
+}
+
 /************************************************************************************/
 /* Side bar */
 /************************************************************************************/
@@ -901,6 +905,7 @@ div.qr-download {
     box-shadow: 0 0 5px 5px rgba(215, 171, 41, 0.4);
     width: 10vw;
     max-width: 120px;
+    margin-right: 10px;
     filter: grayscale(50%) sepia(50%) opacity(70%);
 }
 
@@ -908,6 +913,69 @@ div.qr-download {
     padding-bottom: 15px;
     font-size: .7em;
     text-align: left;
+}
+
+.qr-download figure figcaption:nth-child(3) {
+    padding-top: 11px;
+    font-size: .55em;
+    text-align: left;
+}
+
+.qr-popup {
+    position: absolute;
+    bottom: 51vh;
+    margin-bottom: -220px;
+    /* margin-left: 120px; */
+    background-color: #222;
+    border: 2px solid #404040;
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    padding: 5px; 
+    z-index: 100;
+    font-size: .5em;
+    display: none;
+    opacity: 0;
+    font-weight: 400;
+}
+
+div.qr-popup {
+    padding: 15px !important;
+}
+
+.qr-popup li {
+    list-style-type: disc;
+    margin-left: 25px;
+    padding: 4px 0 4px 0;
+    line-height: .7rem;
+}
+
+.qr-popup ul {
+    margin-bottom: 7px;
+}
+
+.qr-popup span {
+    font-size: .65rem;
+    padding-bottom: 6px;
+    display: block;
+}
+
+.qr-download-fig1:hover .qr-popup {
+    display: block; 
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.qr-download-fig2:hover .qr-popup {
+    display: block; 
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.qr-download-fig3:hover .qr-popup {
+    display: block; 
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 @keyframes pageContentPop {

@@ -81,6 +81,22 @@ class DatabaseConnectManager {
             }
     }
 
+    public function getMobileApplicationList ($table = "mobile_application_list") {
+
+        $outputArray = [];
+
+        $query = "SELECT * FROM $table";
+            try {
+                $db_data = $this -> db_connect -> query($query);
+                while ($row = $db_data -> fetch()) {
+                    array_push($outputArray, $arrayName = array('id' => $row['id'], 'name' => $row['name'], 'desc_app' => $row['desc_app'], 'imageb64' => $row['imageb64'], 'link' => $row['link']));
+                }
+                return $outputArray;
+            } catch (PDOException $e) {
+                return false;
+            }
+    }
+
     public function getMacAddress ($macArray) {
         $query = "SELECT COUNT(address) AS isset FROM mac_address WHERE address IN (".implode(', ', $macArray).") LIMIT 1";
         try {

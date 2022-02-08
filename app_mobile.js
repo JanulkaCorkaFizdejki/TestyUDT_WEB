@@ -302,14 +302,18 @@ document.addEventListener('DOMContentLoaded', function () {
       this.$downloadButtons = downloadButtons
       this.platform = this.platformCheck()
       this.downloadUrl = {
-        iphone: "https://apps.apple.com/tt/app/testy-udt/id1502008238",
-        android: "https://play.google.com/store/apps/details?id=pl.testyudt"
+          iphone: "https://www.apple.com/pl/search/Testy-UDT?src=serp",
+          android_google: "https://play.google.com/store/search?q=testy%20udt",
+          android_huawei: "https://appgallery.huawei.com/#/search/testy%20udt?1610375249495"
       }
+      this.infoDiv = document.querySelectorAll('.qr-popup')
       this.init()
     }
-
+    
     init() {
-      this.events()
+        this.buttonsForPlatform()
+        this.events()
+        this.infoForPlatfrom()
     }
 
     events() {
@@ -318,7 +322,11 @@ document.addEventListener('DOMContentLoaded', function () {
           if (this.platform === "iphone") {
             location.href = this.downloadUrl.iphone
           } else {
-            location.href = this.downloadUrl.android
+              if (e.dataset.platform === "google") {
+                  location.href = this.downloadUrl.android_google
+              } else if (e.dataset.platform === "huawei") {
+                  location.href = this.downloadUrl.android_huawei
+              }
           }
         })
       })
@@ -327,6 +335,40 @@ document.addEventListener('DOMContentLoaded', function () {
     platformCheck() {
       return window.navigator.platform.toLowerCase().trim()
     }
+
+    buttonsForPlatform() {
+        if (this.platform === "iphone") {
+            this.$downloadButtons.forEach(e => {
+                if (e.dataset.platform === "google" | e.dataset.platform === "huawei") {
+                    e.style.display = "none"
+                }
+            })
+        } else {
+            this.$downloadButtons.forEach( e => {
+                if (e.dataset.platform === "iphone") {
+                    e.style.display = "none"
+                }
+            })
+        }
+    }
+
+    infoForPlatfrom() {
+        if (this.platform === "iphone"){
+            this.infoDiv.forEach(el =>{
+                if (el.dataset.platform === "iphone") {
+                    el.style.display = "block"
+                }
+            })
+        } else {
+            this.infoDiv.forEach(el => {
+                if (el.dataset.platform === "google"){
+                    el.style.display = "block"
+                }
+            })
+
+        }
+    }
+
   }
 
   const $downloadButton = document.querySelectorAll('.download-btn')

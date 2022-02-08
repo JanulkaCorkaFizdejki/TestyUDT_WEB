@@ -30,7 +30,7 @@
             // (3)
             "wozki_widlowe_2"    => array (
                 "test-name"                 => "Wózki jezdniowe II",
-                "test-description"          => "Wózki jezdniowe podnośnikowe z mechanicznym napędem podnoszenia z wysięgnikiem oraz wózki jezdniowe podnośnikowe z mechanicznym napędem podnoszenia z osobą obsługującą podnoszoną.",
+                "test-description"          => "Wózki jezdniowe podnośnikowe z mechanicznym napędem podnoszenia z wyłączeniem wózków z wysięgnikiem oraz wózków z osobą obsługującą podnoszoną wraz z ładunkiem.",
                 "questions-limit"           => 15,
                 "answers-limit"             => 4,
                 "part-1"                    => [1, 73, 5],
@@ -62,7 +62,20 @@
                 "part-3"                    => [240, 261, 5],
                 "threshold"                 => 11,
                 "time"                      => 1800
-            )
+            ),
+
+         // (6)
+            "dzwig_towarowo_osobowy"  => array (
+                    "test-name"                 => "Dźwig towarowo-osobowy",
+                    "test-description"          => "Dźwigi towarowo-osobowe ze sterowaniem wewnętrznym i szpitalne",
+                    "questions-limit"           => 15,
+                    "answers-limit"             => 4,
+                    "part-1"                    => [1, 68, 5],
+                    "part-2"                    => [69, 91, 5],
+                    "part-3"                    => [92, 123, 5],
+                    "threshold"                 => 11,
+                    "time"                      => 1800
+                )
 
         ];
 
@@ -87,7 +100,7 @@
     }
 
     class GlobalSettings {
-        private const API_MAIN_URL                          = "http://localhost/MyApp/TestyUDTnewPage/api/"; //http://api.testyudt.com/
+        private const API_MAIN_URL                          = "http://api.testyudt.com/";
         private const API_KEY_VALUE                         = "cdad5e6b5ab66cd4e10b6ace30fee27c";
         private const API_KEY_NAME                          = "api_key";
         private const API_TEST_NAME                         = "api_test_name";

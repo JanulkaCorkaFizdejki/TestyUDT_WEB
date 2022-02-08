@@ -410,6 +410,10 @@ html {
     font-size: calc(1em + 2vw);
 }
 
+.font-size-small {
+    font-size: 0.7rem !important;
+}
+
 /************************************************************************************/
 /* Side bar */
 /************************************************************************************/
@@ -719,6 +723,40 @@ div.qr-download {
 .qr-download img {
     width: 30vw;
     height: auto;
+}
+
+.qr-popup {
+    margin-top: 20px;
+    background-color: inherit;
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    padding: 5px; 
+    z-index: 100;
+    font-size: .5em;
+    display: none;
+    font-weight: 400;
+}
+
+div.qr-popup {
+    padding: 15px !important;
+}
+
+.qr-popup li {
+    list-style-type: disc;
+    margin-left: 25px;
+    padding: 4px 0 4px 0;
+    line-height: .7rem;
+}
+
+.qr-popup ul {
+    margin-bottom: 7px;
+}
+
+.qr-popup span {
+    font-size: .65rem;
+    padding-bottom: 7px;
+    display: block;
 }
 
 @keyframes pageContentPop {
@@ -1037,7 +1075,7 @@ a.ciastko-link:hover {
 .main-btn {
     background-color: #333333;
     color: #d7ab29;
-    width: 50%;
+    width: fit-content;
     font-size: 3vw;
     margin-top: 2vw;
 }
