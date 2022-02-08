@@ -327,6 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } // end Language class
 
+  //   Initialize Lang class
   // const $lang = document.querySelector('.language')
   // if ($lang !== null) {
   //   const langClass = new Language($lang);

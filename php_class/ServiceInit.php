@@ -107,10 +107,10 @@ class ServiceInit {
          vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|
          zte\-/i',substr($useragent,0,4))){
                 return $appSettings::COOKIE_DEVICE_MOBILE_VALUE;
-//                 return $appSettings::COOKIE_DEVICE_DESKTOP_VALUE;
+                // return $appSettings::COOKIE_DEVICE_DESKTOP_VALUE;
             } else {
                 return $appSettings::COOKIE_DEVICE_DESKTOP_VALUE;
-//                 return $appSettings::COOKIE_DEVICE_MOBILE_VALUE;
+                // return $appSettings::COOKIE_DEVICE_MOBILE_VALUE;
             };
     }
 
