@@ -1,0 +1,40 @@
+<div class="copa-edu-box copa-edu-box-open">
+    <div class="copa-edu-content">
+      <p id="open-close-copa-edu"> > </p>
+      <p><img src="images/copa_edu.svg"/></p>
+      <h3>COPA EDU</h3>
+      <p>UPRAWNIENIA NA KOPARKI I KOPARKO-ŁADOWARKI</p>
+
+      <p><span>Aplikacja Copa Edu jest przeznaczona dla osób ubiegających się o kwalifikacje w zakresie obsługi koperek i koparko-ładowarek. Zestaw pytań został opracowany przy udziale firm szkoleniowych (ośrodek szkolenia zawodowego) i jest dostosowany do aktualnych wymogów teoretycznych. Pozwala w sposób wyczerpujący opanować niezbędne zagadnienia wymagane do zdobycia uprawnień nadawanych przez Sieć Badawczą Łukasiewicz IMBiGS.</span></p>
+      <p><a href="https://apps.apple.com/pl/app/copa-edu/id1609302767?l=pl&platform=iphone" target="_blank"><img src="images/app_store_ico.png" width="140" /></a></p>
+      <p><a href="https://play.google.com/store/apps/details?id=com.mobile.copaedu" target="_blank"><img src="images/google_play_ico.png" width="140"/></a></p>
+    </div>
+</div>
+<script>
+  class CopaEdu {
+    constructor() {
+      this.$isOpen = true
+      this.$openCloseBtn = document.getElementById("open-close-copa-edu")
+      this.$copaEduBox = document.getElementsByClassName("copa-edu-box")[0]
+      this.init()
+    }
+
+    init() {
+      this.$openCloseBtn.addEventListener('click', e => {
+          if (this.$isOpen) {
+            this.$openCloseBtn.innerText = "<"
+            this.$copaEduBox.classList.replace("copa-edu-box-open", "copa-edu-box-close")
+            this.$isOpen = false
+          }
+          else {
+            this.$openCloseBtn.innerText = ">"
+            this.$copaEduBox.classList.replace("copa-edu-box-close", "copa-edu-box-open")
+            this.$isOpen = true
+          }
+      })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    new CopaEdu();
+  });
+</script>

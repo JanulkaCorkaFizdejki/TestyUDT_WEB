@@ -1100,6 +1100,7 @@ div.qr-popup {
     right: 50px;
     font-weight: 900;
     font-size: 1.8vw;
+    z-index: 99;
 }
 
 .language a {
@@ -1330,4 +1331,96 @@ a.ciastko-link:hover {
     .page-content-active {
         width: 80vw;
     }
+}
+
+.copa-edu-box {
+    position: fixed;
+    z-index: 98;
+    width: 200px;
+    height: 100%;
+    background-color: #333/* #F25A29 */;
+    right: 0;
+    opacity: 0.9;
+}
+
+.copa-edu-box-open {
+    right: 0; 
+    animation: copa_box_open 0.3s ease-in-out;
+}
+
+@keyframes copa_box_open {
+    from {
+        right: -168px; 
+    }
+
+    to {
+        right: 0px; 
+    }
+}
+
+.copa-edu-box-close {
+    right: -168px;
+    animation: copa_box_close 0.3s ease-in-out; 
+}
+
+@keyframes copa_box_close {
+    from {
+        right: 0px; 
+    }
+
+    to {
+        right: -168px; 
+    }
+}
+
+.copa-edu-content {
+    padding: 30px;
+    padding-top: 100px
+
+}
+
+.copa-edu-content > p {
+    color:white;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.copa-edu-content > p > span {
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #d7ab29;
+}
+
+.copa-edu-content > h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    color:white;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.copa-edu-content > h3 {
+    color:white;
+    text-align: center;
+    font-size: 24px;
+}
+
+#open-close-copa-edu {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #d7ab29;
+    border: 1px solid #d7ab29;
+    padding: 4px;
+    position: fixed;
+    margin-left: -28px;
 }
