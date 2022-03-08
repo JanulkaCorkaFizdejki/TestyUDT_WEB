@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
       downloadVersion1.addEventListener('click', e => {
       //  HERE VERSION ONE
         if (policyCheckbox.checked && agreementCheckbox.checked ) {
-          window.location.href = 'http://testyudt.com/downloads/setupTestyUDT.exe'
+          window.location.href = 'https://testyudt.com/downloads/setupTestyUDT.exe'
           // acceptTermsAlert.style.visibility = 'hidden';
           acceptTermsAlert.style.display = 'none';
         } else {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
       downloadVersion2.addEventListener('click', e => {
         //  HERE VERSION TWO
         if (policyCheckbox.checked  && agreementCheckbox.checked) {
-          window.location.href = 'http://testyudt.com/downloads/TestyUDT.rar'
+          window.location.href = 'https://testyudt.com/downloads/TestyUDT.rar'
           // acceptTermsAlert.style.visibility = 'hidden';
           acceptTermsAlert.style.display = 'none';
         } else {
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (cookieLang) {
         cookieLang = cookieLang.trim().split("=")[1]
       }
-      if (cookieLang === this.languages.uk || window.location.href === 'http://testyudt.com/UK') {
+      if (cookieLang === this.languages.uk || window.location.href === 'https://testyudt.com/UK') {
         this.defaultLanguage = this.languages.uk
       } else {
         if (navigator.language === this.languages.uk) {
